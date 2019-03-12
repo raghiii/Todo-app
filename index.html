@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
+        <title>To-Do</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <style>
+            *{
+                font-family: 'Sniglet', cursive;
+            }
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                margin-left: 440px;
+                color: white;
+            }
+
+            .form-inline {
+                justify-content: center;
+            }
+
+            .form-inline .form-group {
+                width: 40%;
+            }
+
+            .form-inline .form-control {
+                width: 100%;
+            }
+
+            ul {
+                margin-top: 30px;
+            }
+
+            li {
+                align-items: center;
+            }
+
+            li .data {
+                margin-left: 30px;
+                margin-right: 30px;
+                font-size: 24px;
+                border: none;
+                width: calc(100% - 200px);
+            }
+
+            li button {
+                float: right;
+                margin-left: 20px;
+                width: 100px;
+            }
+
+            .checkedItem {
+                text-decoration: line-through;
+                color: rgba(0, 0, 0, 0.525);
+            }
+
+            .checkedItem #b{
+            	display: none;
+            }
+            #grad1 {
+  				height: 750px;
+  				background-color: blue;
+  				background-image: linear-gradient(to bottom right, blue, lightgreen);
+			}
+		</style>
+	</head>
+	<body id = "grad1">
+        <div class="container mt-5">
+			<h1>To-Do's</h1>
+			<div class="form-inline">
+                <div class="form-group">
+                    <input class="form-control" id="newitem" type="text" placeholder="Add ur todos for today here..." autofocus required onkeyup="keyup(event)">
+                </div>
+                <button onclick="insert()" class="btn btn-success ml-4">Submit</button>
+            </div>
+
+            <!--Display data from DB in a list-->
+            <ul id="tasklist" class="list-group">
+                
+            </ul>
+
+
+        </div>
+
+
+    </body>
+</html>
